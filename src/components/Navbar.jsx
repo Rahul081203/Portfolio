@@ -24,8 +24,7 @@ const Navbar = () => {
       shadow ? 'bg-[#0a192f]/90 backdrop-blur-sm shadow-xl' : 'bg-[#0a192f]'
     } transition-all duration-300`}>
       <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-      <img src="/logo.jpeg" alt="Portfolio Logo" className="h-16 w-16 object-contain" />
-
+        <img src="/logo.jpeg" alt="Portfolio Logo" className="h-16 w-16 object-contain" />
 
         <div>
           <ul className="hidden md:flex">
@@ -54,8 +53,7 @@ const Navbar = () => {
         }`}>
           <div>
             <div className="flex w-full items-center justify-between">
-            <img src={`${process.env.PUBLIC_URL}/logo.jpeg`} alt="Portfolio Logo" className="h-16 w-16 object-contain" />
-
+              <img src="/logo.jpeg" alt="Portfolio Logo" className="h-16 w-16 object-contain" />
 
               <div onClick={handleNav} className="rounded-full p-3 cursor-pointer">
                 <X className="h-6 w-6" />
