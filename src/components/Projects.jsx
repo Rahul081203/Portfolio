@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, technologies, imagePath, github, exte
     >
       <div className="relative overflow-hidden h-48">
         <img
-          src={imagePath}
+          src={`${process.env.PUBLIC_URL}${imagePath}`}
           alt={title}
           className={`w-full h-full object-cover transition-transform duration-500 ${
             isHovered ? 'scale-110' : 'scale-100'
@@ -93,7 +93,6 @@ const Projects = () => {
       imagePath: "/cubesat.jpeg",
       external: null
     },
-    // Additional projects from your resume
     {
       title: "Retrieval-Augmented Generation (RAG) with LangChain",
       description: "Developed a RAG system leveraging Langchain for content generation, incorporating advanced NLP techniques.",
