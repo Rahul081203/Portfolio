@@ -53,8 +53,7 @@ const Navbar = () => {
         }`}>
           <div>
             <div className="flex w-full items-center justify-between">
-              <img src="/logo.jpeg" alt="Portfolio Logo" className="h-16 w-16 object-contain" />
-
+            <img src="/Portfolio/logo.jpeg" alt="Portfolio Logo new" className="h-16 w-16 object-contain" />
               <div onClick={handleNav} className="rounded-full p-3 cursor-pointer">
                 <X className="h-6 w-6" />
               </div>
