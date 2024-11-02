@@ -75,7 +75,7 @@ const Projects = () => {
     {
       title: "Quantum Portfolio Optimizer",
       description: "Advanced quantum computing algorithm for optimizing investment portfolios using Q# and Azure Quantum.",
-      technologies: ["Q#", "Azure Quantum", "Python", "Quantum Algorithms"],
+      technologies: ["IBM Qiskit", "AWS Braket", "Python", "Quantum Algorithms"],
       imagePath: "/quantum.jpg",
       external: null
     },
@@ -89,7 +89,7 @@ const Projects = () => {
     {
       title: "CubeSat Control System",
       description: "Attitude Determination and Control System (ADCS) for 3U CubeSat mission.",
-      technologies: ["C++", "MATLAB", "Embedded Systems", "Control Systems"],
+      technologies: ["C++", "Arduino", "Embedded Systems", "Control Systems"],
       imagePath: "/cubesat.jpeg",
       external: null
     },
@@ -117,7 +117,7 @@ const Projects = () => {
     {
       title: "Smart Parking Management App",
       description: "Flutter app for automatic parking management using computer vision for license plate recognition.",
-      technologies: ["Flutter", "Dart", "Computer Vision"],
+      technologies: ["Flutter", "Dart", "Computer Vision", "Firebase"],
       imagePath: "/smart_parking.jpg",
       external: null
     },
@@ -133,6 +133,20 @@ const Projects = () => {
       description: "Personalized recommendation engine using collaborative filtering to enhance user engagement and sales.",
       technologies: ["Machine Learning", "Python"],
       imagePath: "/recommendation_system.jpg",
+      external: null
+    },
+    {
+      title: "E-commerce Platform",
+      description: "Designed a scalable e-commerce application with React, Node.js, Express, and MongoDB, featuring user authentication, product catalog, and order management.",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      imagePath: "/ecommerce.jpg", // Make sure to add the actual image file to the public folder
+      external: null
+    },
+    {
+      title: "Social Media App",
+      description: "Built a social media application featuring user profiles, posts, likes, and comments using the MERN stack, achieving optimized database queries and front-end performance.",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      imagePath: "/social.jpg", // Make sure to add the actual image file to the public folder
       external: null
     }
   ];
