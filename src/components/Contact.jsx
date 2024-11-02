@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send, Github, Linkedin } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    reply_to: '',
     message: ''
   });
 
+  const [feedbackMessage, setFeedbackMessage] = useState(''); // New state for feedback
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
+
+    emailjs.sendForm(
+      'service_w7pwrze',
+      'template_2gwvw4a',
+      e.target,
+      'wOEH6CAaD-41CwHkn'
+    ).then((result) => {
+        console.log('Email successfully sent!', result.text);
+        setFormData({ from_name: '', reply_to: '', message: '' });
+        setFeedbackMessage('Message sent successfully!'); // Set success message
+    }).catch((error) => {
+        console.error('Error sending email:', error);
+        setFeedbackMessage('Failed to send the message. Please try again.'); // Set error message
+    });
   };
 
   const handleChange = (e) => {
@@ -45,14 +60,14 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2">
+                <label htmlFor="from_name" className="block text-gray-300 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="from_name"
+                  name="from_name"
+                  value={formData.from_name}
                   onChange={handleChange}
                   className="w-full p-3 rounded-lg bg-[#112240] text-gray-300 border border-gray-700 focus:border-[#64ffda] focus:ring-1 focus:ring-[#64ffda] outline-none transition-colors"
                   required
@@ -60,14 +75,14 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">
+                <label htmlFor="reply_to" className="block text-gray-300 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="reply_to"
+                  name="reply_to"
+                  value={formData.reply_to}
                   onChange={handleChange}
                   className="w-full p-3 rounded-lg bg-[#112240] text-gray-300 border border-gray-700 focus:border-[#64ffda] focus:ring-1 focus:ring-[#64ffda] outline-none transition-colors"
                   required
@@ -96,6 +111,13 @@ const Contact = () => {
                 <Send className="h-5 w-5" />
                 Send Message
               </button>
+
+              {/* Feedback Message */}
+              {feedbackMessage && (
+                <p className={`mt-4 text-lg ${feedbackMessage.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}>
+                  {feedbackMessage}
+                </p>
+              )}
             </form>
           </motion.div>
 
@@ -118,6 +140,14 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4">
+                <a
+                  href="mailto:rahulsharmapro10@gmail.com"
+                  className="flex items-center gap-4 p-4 rounded-lg bg-[#0a192f] hover:bg-[#64ffda]/5 transition-colors"
+                >
+                  <Mail className="h-6 w-6 text-[#64ffda]" />
+                  <span className="text-gray-300">Email me at rahulsharmapro10@gmail.com</span>
+                </a>
+
                 <a
                   href="https://www.linkedin.com/in/rahul-sharma-188117253/"
                   target="_blank"

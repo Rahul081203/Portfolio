@@ -74,7 +74,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Quantum Portfolio Optimizer",
-      description: "Advanced quantum computing algorithm for optimizing investment portfolios using Q# and Azure Quantum.",
+      description: "Advanced quantum computing algorithm for optimizing investment portfolios using IBM Qiskit and AWS Braket.",
       technologies: ["IBM Qiskit", "AWS Braket", "Python", "Quantum Algorithms"],
       imagePath: "/quantum.jpg",
       external: null
