@@ -51,9 +51,8 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Updated Download Resume Button */}
           <a
-  href="/resume.pdf"
+  href={`${process.env.PUBLIC_URL}/resume.pdf`}
   download
   className="mt-8 inline-block px-6 py-3 text-lg bg-[#0a192f] text-[#64ffda] border border-[#64ffda] rounded-full hover:bg-[#1e3a60] hover:text-[#ffffff] transition-all duration-300"
 >
