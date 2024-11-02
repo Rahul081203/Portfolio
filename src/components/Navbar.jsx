@@ -54,7 +54,7 @@ const Navbar = () => {
         }`}>
           <div>
             <div className="flex w-full items-center justify-between">
-            <img src="/logo.jpeg" alt="Portfolio Logo" className="h-16 w-16 object-contain" />
+            <img src={`${process.env.PUBLIC_URL}/logo.jpeg`} alt="Portfolio Logo" className="h-16 w-16 object-contain" />
 
 
               <div onClick={handleNav} className="rounded-full p-3 cursor-pointer">
