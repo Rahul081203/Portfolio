@@ -139,14 +139,14 @@ const Projects = () => {
       title: "E-commerce Platform",
       description: "Designed a scalable e-commerce application with React, Node.js, Express, and MongoDB, featuring user authentication, product catalog, and order management.",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
-      imagePath: "/ecommerce.jpg", // Make sure to add the actual image file to the public folder
+      imagePath: "/ecommerce.jpeg", // Make sure to add the actual image file to the public folder
       external: null
     },
     {
       title: "Social Media App",
       description: "Built a social media application featuring user profiles, posts, likes, and comments using the MERN stack, achieving optimized database queries and front-end performance.",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
-      imagePath: "/social.jpg", // Make sure to add the actual image file to the public folder
+      imagePath: "/social.jpeg", // Make sure to add the actual image file to the public folder
       external: null
     }
   ];
